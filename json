@@ -1,0 +1,59 @@
+{
+  "type": "robot_task_request",
+  "robot": "tinyRobot1",
+  "fleet": "tinyRobot",
+  "request": {
+    "category": "compose",
+    "description": {
+      "category": "teleop",
+      "phases": [
+        {
+          "activity": {
+            "category": "sequence",
+            "description": {
+              "activities": [
+                {
+                  "category": "go_to_place",
+                  "description": "drop3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "activity": {
+            "category": "sequence",
+            "description": {
+              "activities": [
+                {
+                  "category": "perform_action",
+                  "description": {
+                    "unix_millis_action_duration_estimate": 60000,
+                    "category": "wait_until",
+                    "description": {
+                      "timeout": 10,
+                      "location": "drop3"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "activity": {
+            "category": "sequence",
+            "description": {
+              "activities": [
+                {
+                  "category": "go_to_place",
+                  "description": "pick1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
