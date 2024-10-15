@@ -1,0 +1,30 @@
+{
+  "world_name" : "Office World",  
+  "valid_task": ["Delivery", "Loop"],
+  "task": {
+    "Delivery": {
+      "option": {
+        "coke": {
+          "pickup_place_name": "pick1",
+          "pickup_dispenser": "drop4",
+          "dropoff_place_name": "drop3",
+          "dropoff_ingestor": "drop2"
+        }
+      }
+    },
+    "Loop": {
+      "places": [
+        "pick1",
+        "drop4"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}
